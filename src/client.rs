@@ -140,6 +140,8 @@ impl Client {
         ];
         let request = self.builder.create(function, &params);
         let response = self.api_call(request).await?;
+        // response...
+        println!("{:?}", response);
         let result = exchange_rate::parser::parse(response)?;
         Ok(result)
     }

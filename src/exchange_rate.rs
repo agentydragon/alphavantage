@@ -64,6 +64,7 @@ pub(crate) mod parser {
             return Err(Error::APIError(error));
         }
 
+        // TODO: should get it working
         let data = helper
             .data
             .ok_or_else(|| Error::ParsingError("missing exchange rate data".into()))?;
